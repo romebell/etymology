@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 Project Name: Etymology
@@ -25,3 +26,12 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# Etymology
+
+### I'm making a clone of Spotify 
+
+[Database Schema](https://github.com/romebell/etymology/wiki/Database-Schema)
+
+[Sample State](https://github.com/romebell/etymology/wiki/Sample-State)
+>>>>>>> cb99d446f3d76d0e55e23d59eb1a02286b34c294
