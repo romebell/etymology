@@ -1,19 +1,24 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
-// import Root from './
-import {login, signup, logout} from './utils/session_api_util';
+import Root from './components/root';
+// import {login, signup, logout} from './utils/session_api_util';
+import { postUser } from './utils/session_api_util';
 
 document.addEventListener("DOMContentLoaded", () => {
+  const store = configureStore();
+
+  // TESTING START
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+  // Testing END
+
   const root = document.getElementById("root");
-  
-  ReactDOM.render(<h1>Welcome to Etymology</h1>, root);
+  ReactDOM.render(<Root store={store} />, root);
 })
 
-// TESTING 
+
+// TESTING
 // window.login = login;
-// window.signup = signup;
+window.postUser = postUser;
 // window.logout = logout;
-let store = configureStore();
-window.getState = store.getState;
-window.dispatch = store.dispatch;
