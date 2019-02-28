@@ -1,7 +1,4 @@
 const path = require('path');
-module.exports = {
-
-}
 
 module.exports = {
   entry: './frontend/etymology.jsx',

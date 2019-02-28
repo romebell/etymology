@@ -36,6 +36,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 # Pry rails
 gem 'pry-rails'
+
+# jQuery rails
 gem 'jquery-rails'
 
 group :development, :test do
