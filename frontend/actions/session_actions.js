@@ -1,5 +1,4 @@
 import * as SessionAPIUtils from '../utils/session_api_util';
-import { Session } from 'inspector';
 
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
