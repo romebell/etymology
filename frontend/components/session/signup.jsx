@@ -26,13 +26,16 @@ class Signup extends React.Component {
     return(
       
       <div className="content">
-        <h1>Etymology</h1>
+        <seciton>
+          <img width="43px" height="43px" src="https://icons-for-free.com/free-icons/png/512/112764.png" alt="Etymology"/>
+          <h1>Etymology</h1>
+        </seciton>
         <hr />
         <h3>Sign up with your email address</h3>
         <form>
           <input type="text" onChange={this.handleInput("username")} placeholder="Email" value={this.state.username}/>
           <br/>
-          <input type="" placeholder="Confirm Email"/>
+          <input type="text" placeholder="Confirm Email"/>
           <br/>
           <input type="password" onChange={this.handleInput("password")} placeholder="Password" value={this.state.password}/>
           <br/>

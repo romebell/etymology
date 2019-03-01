@@ -4,7 +4,6 @@ import { Route } from 'react-router-dom';
 
 const App = () => (
   <div>
-    <h1>Etymology</h1>
     <Route path='/signup' component={SignupContainer} />
   </div>
 );

@@ -20,5 +20,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // TESTING
 // window.login = login;
-window.postUser = postUser;
+// window.postUser = postUser;
 // window.logout = logout;
