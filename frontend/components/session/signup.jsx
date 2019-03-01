@@ -4,8 +4,10 @@ class Signup extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      username: "",
-      password: ""
+      email: "",
+      confirmEmail: "",
+      password: "",
+      username: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -35,13 +37,13 @@ class Signup extends React.Component {
             <p><span>or</span></p>
           <h3>Sign up with your email address</h3>
           <form>
-            <input type="text" onChange={this.handleInput("username")} placeholder="Email" value={this.state.username}/>
+            <input type="text" onChange={this.handleInput("email")} placeholder="Email" value={this.state.email}/>
             <br/>
-            <input type="text" placeholder="Confirm Email"/>
+            <input type="text" onChange={this.handleInput("confirmEmail")} value={this.state.confirmEmail} placeholder="Confirm Email"/>
             <br/>
             <input type="password" onChange={this.handleInput("password")} placeholder="Password" value={this.state.password}/>
             <br/>
-            <input type="text" placeholder="What should we call you?" />
+            <input type="text" onChange={this.handleInput("username")} value={this.state.username} placeholder="What should we call you?" />
             <br/>
             <button className="sign-up" onClick={this.handleSubmit}>Sign Up</button>
             <br/>
