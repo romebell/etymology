@@ -1,3 +1,126 @@
 // Place all the styles related to the api/users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// Place all the styles related to the api/sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  font-family: "Circular", Helvetica, Arial, sans-serif
+}
+
+.content {
+  text-align: center;
+  display: block;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+hr {
+  border: none;
+  height: 0.25px;
+  border-top: 1px solid #eee;
+  margin-top: 20px;
+}
+
+input[type=text], input[type=password], select {
+  width: 45%;
+  max-width: 400px;
+  min-width: 400px;
+  padding: 0 0.75em;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #dfe0e6;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 48px;
+  font-size: .9375em;
+}
+
+button {
+  width: 45%;
+  max-width: 320px;
+  min-width: 320px;
+  background-color: #1ED15E;
+  color: white;
+  padding: 14px 20px;
+  font-size: 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 500px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.sign-up {
+  background-color: #1DB954;
+  margin-bottom: 1em;
+}
+
+
+.demo-login {
+  background-color: #3B5998;
+  margin-top: 17.5px;
+}
+
+// .login {
+//   text-align: center;
+// }
+
+input[type=submit]:hover {
+  background-color: #1DB954;
+}
+
+img {
+  margin-top: 15px;
+  width: 57px; 
+  height: 56px;
+}
+
+p {
+  width: 45%; 
+  max-width: 450px;
+  min-width: 450px;
+  line-height: 0.1em;
+  display: inline-block;
+  height: 0.25px;
+  border-top: 1px solid #eee;
+  text-align: center;
+} 
+
+p span { 
+  background:#fff; 
+  padding:0 10px; 
+  font-size: .875em;
+  font-weight: 550;
+}
+
+div h3 {
+  font-weight: 900;
+  margin: 0 0 .5em;
+}
+
+h1 {
+  display: inline;
+  position: relative;
+  top: -13px;
+  left: 5px;
+  font-family: 'Work Sans', sans-serif;
+  // font-weight: bold;
+  font-size: 34px;
+
+}
+
+section {
+  display: inline;
+}
+
+a {
+  color: #1DB954;
+  text-decoration: none;
+}

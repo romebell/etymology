@@ -24,27 +24,30 @@ class Signup extends React.Component {
 
   render() {
     return(
-      
-      <div className="content">
-        <seciton>
-          <img width="43px" height="43px" src="https://icons-for-free.com/free-icons/png/512/112764.png" alt="Etymology"/>
-          <h1>Etymology</h1>
-        </seciton>
-        <hr />
-        <h3>Sign up with your email address</h3>
-        <form>
-          <input type="text" onChange={this.handleInput("username")} placeholder="Email" value={this.state.username}/>
+        <div className="content">
+          <section>
+            <img src="https://icons-for-free.com/free-icons/png/512/112764.png" alt="Etymology"/>
+            <h1>Etymology</h1>
+          </section>
+          <hr />
+          <button className="demo-login">Demo Login</button>
           <br/>
-          <input type="text" placeholder="Confirm Email"/>
-          <br/>
-          <input type="password" onChange={this.handleInput("password")} placeholder="Password" value={this.state.password}/>
-          <br/>
-          <input type="text" placeholder="What should we call you?" />
-          <br/>
-          <button onClick={this.handleSubmit}>Sign Up</button>
-          <br/>
-        </form>
-      </div>
+            <p><span>or</span></p>
+          <h3>Sign up with your email address</h3>
+          <form>
+            <input type="text" onChange={this.handleInput("username")} placeholder="Email" value={this.state.username}/>
+            <br/>
+            <input type="text" placeholder="Confirm Email"/>
+            <br/>
+            <input type="password" onChange={this.handleInput("password")} placeholder="Password" value={this.state.password}/>
+            <br/>
+            <input type="text" placeholder="What should we call you?" />
+            <br/>
+            <button className="sign-up" onClick={this.handleSubmit}>Sign Up</button>
+            <br/>
+            <p className="login">Already have an account? <a href="/login">Sign In</a></p>
+          </form>
+        </div>
     )
   }
 }

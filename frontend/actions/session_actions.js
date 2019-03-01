@@ -19,15 +19,21 @@ const receiveErrors = errors => ({
 });
 
 export const signup = formUser => dispatch => (
-  SessionAPIUtil.postUser(formUser).then(user => {
+  SessionAPIUtil.postUser(formUser).then(
+    user => {
     dispatch(receiveCurrentUser(user))
+  }, err => {
+    dispatch(receiveErrors(err.responseJSON))
   })
 )
 
 
 export const login = user => dispatch => (
-  SessionAPIUtil.postSession(user).then(user => {
+  SessionAPIUtil.postSession(user).then(
+    user => {
     dispatch(receiveCurrentUser(user))
+  }, err => {
+    dispatch(receiveErrors(err.responseJSON))
   })
 )
 
