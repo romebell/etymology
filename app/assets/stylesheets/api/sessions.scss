@@ -37,8 +37,6 @@ input[type=text], input[type=password], select {
 
 button {
   width: 45%;
-  max-width: 320px;
-  min-width: 320px;
   background-color: #1ED15E;
   color: white;
   padding: 14px 20px;
@@ -52,7 +50,7 @@ button {
   letter-spacing: 2px;
 }
 
-.sign-up {
+.signup-login-submit {
   background-color: #1DB954;
   margin-bottom: 1em;
 }
@@ -63,12 +61,34 @@ button {
   margin-top: 17.5px;
 }
 
-// .login {
-//   text-align: center;
-// }
+.btn-signup-page {
+  max-width: 320px;
+  min-width: 320px;
+}
 
-input[type=submit]:hover {
-  background-color: #1DB954;
+.btn-login-page {
+  max-width: 450px;
+  min-width: 450px;
+}
+
+.signup-submit-btn {
+  color: #616467;
+  border: 3px solid #616467;
+  background-color: white;
+}
+
+.signup-submit-btn:hover {
+  background-color: #616467;
+  color: white;
+  border: 1px solid #616467;
+}
+
+.signup-login-submit:hover {
+  background-color: #1ED760;
+}
+
+.demo-login:hover {
+  background-color: #3A61B2;
 }
 
 img {
@@ -117,4 +137,8 @@ section {
 a {
   color: #1DB954;
   text-decoration: none;
+}
+
+.signup-page {
+  margin-top: 35px;
 }

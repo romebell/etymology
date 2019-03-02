@@ -46,7 +46,7 @@ class Signup extends React.Component {
             <br/>
             <input type="text" onChange={this.handleInput("username")} value={this.state.username} placeholder="What should we call you?" />
             <br/>
-            <button className="sign-up" onClick={this.handleSubmit}>Sign Up</button>
+            <button className="signup-login-submit btn-signup-page" onClick={this.handleSubmit}>Sign Up</button>
             <br/>
             <p className="login">Already have an account? <Link to="/login">Log In</Link></p>
           </form>
