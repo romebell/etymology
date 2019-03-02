@@ -27,7 +27,6 @@ export const signup = formUser => dispatch => (
   })
 )
 
-
 export const login = user => dispatch => (
   SessionAPIUtil.postSession(user).then(
     user => {
@@ -36,26 +35,6 @@ export const login = user => dispatch => (
     dispatch(receiveErrors(err.responseJSON))
   })
 )
-
-
-// export const signup = formUser => dispatch => (
-//   SessionAPIUtil.signup(user).then(user => {
-//     dispatch(receiveCurrentUser(user))
-//   })
-// )
-
-// SessionAPIUtil.signup(user).then(
-//   user => (dispatch(receiveCurrentUser(user))),
-//   err => (dispatch(receiveErrors(err.reponseJSON)))
-// )
-
-
-// export const login = user => dispatch => (
-//   SessionAPIUtil.login(user).then(
-//     user => (dispatch(receiveCurrentUser(user))), 
-//     err => (dispatch(receiveErrors(err.reponseJSON)))
-//   )
-// )
 
 export const logout = () => dispatch => (
   SessionAPIUtil.deleteSession().then(dispatch(logoutCurrentUser()))
