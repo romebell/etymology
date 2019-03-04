@@ -28,8 +28,8 @@ class Login extends React.Component {
     return(
         <div className="content">
           <section>
-            <img src="https://icons-for-free.com/free-icons/png/512/112764.png" alt="Etymology"/>
-            <h1>Etymology</h1>
+            <img className="login-signup-logo" src="https://icons-for-free.com/free-icons/png/512/112764.png" alt="Etymology"/>
+            <h1 className="login-signup-h1">Etymology</h1>
           </section>
           <hr />
           <button className="demo-login btn-login-page">Demo Login</button>
@@ -54,6 +54,5 @@ class Login extends React.Component {
   }
   
 }
-
 
 export default Login;
