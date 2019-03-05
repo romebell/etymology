@@ -8,6 +8,7 @@
 #  session_token   :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  email           :string           not null
 #
 
 class User < ApplicationRecord
@@ -15,6 +16,8 @@ class User < ApplicationRecord
   validates :password_digest, presence: { message: 'Password can\'t be blank'}
   validates :username, :session_token, uniqueness: true 
   validates :password, length: { minimum: 6, allow_nil: true }
+
+  has_many :playlists
 
   attr_reader :password 
 
