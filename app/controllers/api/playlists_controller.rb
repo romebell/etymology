@@ -9,10 +9,6 @@ class Api::PlaylistsController < ApplicationController
     @playlist = select_playlist
   end
 
-  def new
-    @playlist = Playlist.new
-  end
-
   def create
     @playlist = Playlist.new(playlist_params)
     @playlist.user_id = current_user.id
