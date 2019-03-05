@@ -19,9 +19,10 @@ hr {
   height: 0.25px;
   border-top: 1px solid #eee;
   margin-top: 20px;
-}
+}   
 
 input[type=text], input[type=password], select {
+  text-align: left;
   width: 45%;
   max-width: 400px;
   min-width: 400px;
@@ -123,7 +124,7 @@ div h3 {
 .login-signup-h1 {
   display: inline;
   position: relative;
-  top: -13px;
+  top: 24px;
   left: 5px;
   font-family: 'Work Sans', sans-serif;
   font-size: 34px;
@@ -131,7 +132,8 @@ div h3 {
 }
 
 section {
-  display: inline;
+  display: flex;
+  justify-content: center;
 }
 
 a {

@@ -10,23 +10,23 @@
   font-family: "Circular", Helvetica, Arial, sans-serif
 }
 
-.content {
-  text-align: center;
-  display: block;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
+// .content {
+//   text-align: center;
+//   display: block;
+//   padding-left: 15px;
+//   padding-right: 15px;
+//   margin-right: auto;
+//   margin-left: auto;
+// }
 
-hr {
+.login hr {
   border: none;
   height: 0.25px;
   border-top: 1px solid #eee;
   margin-top: 20px;
 }
 
-input[type=text], input[type=password], select {
+.login input[type=text], input[type=password], select {
   width: 45%;
   max-width: 400px;
   min-width: 400px;
@@ -68,11 +68,7 @@ button {
   margin-top: 17.5px;
 }
 
-// .login {
-//   text-align: center;
-// }
-
-input[type=submit]:hover {
+.login input[type=submit]:hover {
   background-color: #1DB954;
 }
 
@@ -82,7 +78,7 @@ input[type=submit]:hover {
   height: 56px;
 }
 
-p {
+.login p {
   width: 45%; 
   max-width: 450px;
   min-width: 450px;
@@ -93,14 +89,14 @@ p {
   text-align: center;
 } 
 
-p span { 
+.login p span { 
   background:#fff; 
   padding:0 10px; 
   font-size: .875em;
   font-weight: 550;
 }
 
-div h3 {
+.login div h3 {
   font-weight: 900;
   margin: 0 0 .5em;
 }
@@ -108,18 +104,19 @@ div h3 {
 .login-sign-h1 {
   display: inline;
   position: relative;
-  top: -13px;
+  top: 24px;
   left: 5px;
   font-family: 'Work Sans', sans-serif;
   font-size: 34px;
 
 }
 
-section {
-  display: inline;
+.login section {
+  display: flex;
+  justify-content: center;
 }
 
-a {
+.login a {
   color: #1DB954;
   text-decoration: none;
 }
