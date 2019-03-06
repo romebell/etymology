@@ -34,3 +34,4 @@ export const destroyPlaylist = id => {
     url: `/api/playlists/${id}`
   })
 };
+

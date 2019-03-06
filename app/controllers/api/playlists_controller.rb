@@ -44,11 +44,11 @@ class Api::PlaylistsController < ApplicationController
   private
 
   def select_playlist
-    Playlist.find_by(params[:id])
+    Playlist.find(params[:id])
   end
 
   def playlist_params
-    params.require(:playlist).permit(:title)
+    params.require(:playlist).permit(:title, :user_id)
   end
 
 end

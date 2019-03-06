@@ -23,7 +23,7 @@ const Home = () => {
       <div className="home-centered">
         <h1>Music for everyone.</h1>
         <h4>Millions of songs. No credit card needed.</h4>
-        <button src="#/signup" className="signup-login-submit btn-signup-page">Get Etymology Free</button>
+        <Link to="/signup"><button className="signup-login-submit btn-signup-page">Get Etymology Free</button></Link>
       </div>
       <div className="home-footer">
        <nav>

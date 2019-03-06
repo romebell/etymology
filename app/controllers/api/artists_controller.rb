@@ -12,6 +12,6 @@ class Api::ArtistsController < ApplicationController
   private
 
   def select_artist
-    Artist.find_by(params[:id])
+    Artist.find(params[:id])
   end
 end
