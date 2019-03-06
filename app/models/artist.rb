@@ -18,8 +18,7 @@ class Artist < ApplicationRecord
     class_name: :Album 
 
   has_many :songs,
-    primary_key: :id,
-    foreign_key: :artist_id,
-    class_name: :Song 
+    through: :albums,
+    source: :songs
 
 end
