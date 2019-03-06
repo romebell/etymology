@@ -1,3 +1,42 @@
 // Place all the styles related to the api/playlists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.container {
+  display: grid;
+
+  grid-template-columns: 113px 113px 80px;
+  grid-template-rows: 655px auto;
+
+  grid-gap: 0px 0px;
+  border: 1px solid red;
+  height: 100vh;
+}
+
+.box-1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border: 1px solid blue;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background: green;
+}
+
+
+.box-2 {
+  background: blue;
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.box-3 {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  border: 1px solid green;
+  background: pink;
+}

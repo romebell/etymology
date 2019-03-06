@@ -1,4 +1,5 @@
 import { RECEIVE_ALL_PLAYLISTS, RECEIVE_PLAYLIST, REMOVE_PLAYLIST } from '../actions/playlist_actions';
+import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
 
 const PlaylistsReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -13,6 +14,9 @@ const PlaylistsReducer = (state = {}, action) => {
     case REMOVE_PLAYLIST:
       delete newState[action.playlistId];
       return newState;
+    case RECEIVE_CURRENT_USER:
+      if (action.payload.playlists) return action.payload.playlists;
+      return {};
     default:
       return state;
   }
