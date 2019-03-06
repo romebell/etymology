@@ -6,10 +6,11 @@ class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: "",
+      email: "",
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demo = this.demo.bind(this);
   }
 
   handleInput(type) {
@@ -24,6 +25,11 @@ class Login extends React.Component {
       .then(() => this.props.history.push('/playlists'));
   }
 
+  demo() {
+    this.props.login({email: "robert1@test.com", password: "password123"})
+      .then(() => this.props.history.push('/playlists'));
+  }
+
   render() {
     return(
         <div className="content">
@@ -33,11 +39,11 @@ class Login extends React.Component {
               <h1 className="login-signup-h1">Etymology</h1>
             </section>
             <hr />
-            <button className="demo-login btn-login-page">Demo Login</button>
+            <button onClick={this.demo} className="demo-login btn-login-page">Demo Login</button>
             <br/>
               <p><span>OR</span></p>
             <form>
-              <input type="text" onChange={this.handleInput("username")} placeholder="Email address or username" value={this.state.email}/>
+              <input type="text" onChange={this.handleInput("email")} placeholder="Email address" value={this.state.email}/>
               <br/>
               <input type="password" onChange={this.handleInput("password")} placeholder="Password" value={this.state.password}/>
               <br/>
@@ -47,7 +53,7 @@ class Login extends React.Component {
               <hr />
               <div className="signup-page">
                 <h3>Don't have an account?</h3>
-                <button className="signup-submit-btn btn-login-page"><Link to="/signup">Sign up for Etymoloogy</Link></button>
+                <Link to="/signup"><button className="signup-submit-btn btn-login-page">Sign up for Etymology</button></Link>
               </div>
             </form>
           </div>

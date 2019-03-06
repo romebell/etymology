@@ -11,6 +11,7 @@ class Signup extends React.Component {
       username: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demo = this.demo.bind(this)
   }
 
   handleInput(type) {
@@ -25,6 +26,11 @@ class Signup extends React.Component {
       .then(() => this.props.history.push('/playlists'));
   }
 
+  demo() {
+    this.props.login({email: "robert1@test.com", password: "password123"})
+      .then(() => this.props.history.push('/playlists'));
+  }
+
   render() {
     return(
         <div className="content">
@@ -33,7 +39,7 @@ class Signup extends React.Component {
             <h1 className="login-signup-h1">Etymology</h1>
           </section>
           <hr />
-          <button className="demo-login">Demo Login</button>
+          <button onClick={this.demo} className="demo-login">Demo Login</button>
           <br/>
             <p><span>or</span></p>
           <h3>Sign up with your email address</h3>

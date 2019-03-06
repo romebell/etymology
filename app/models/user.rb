@@ -12,9 +12,9 @@
 #
 
 class User < ApplicationRecord
-  validates :username, :session_token, presence: true
+  validates :username, :session_token, :email, presence: true
   validates :password_digest, presence: { message: 'Password can\'t be blank'}
-  validates :username, :session_token, uniqueness: true 
+  validates :username, :email, :session_token, uniqueness: true 
   validates :password, length: { minimum: 6, allow_nil: true }
 
   attr_reader :password 
@@ -26,8 +26,8 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: :Playlist
 
-  def self.find_by_credentials(username, password)
-    user = User.find_by(username: username)
+  def self.find_by_credentials(email, password)
+    user = User.find_by(email: email)
     user && user.is_password?(password) ? user : nil 
   end
 

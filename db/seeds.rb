@@ -9,7 +9,7 @@
 # User.destroy_all
 # Playlist.destroy_all
 
-demo = User.create!({email: "user001@test.com", username: "Robert", password: "password123"})
+demo = User.create!({email: "robert1@test.com", username: "robert", password: "password123"})
 
 user1 = User.create!({username: Faker::Name.name, email: Faker::Internet.email, password: 'password'})
 user2 = User.create!({username: Faker::Name.name, email: Faker::Internet.email, password: 'password'})
