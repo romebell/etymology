@@ -10,17 +10,17 @@
   grid-template-rows: 655px auto;
 
   grid-gap: 0px 0px;
-  border: 1px solid red;
   height: 100vh;
 }
 
 .box-1 {
   grid-column-start: 1;
   grid-column-end: 3;
-  border: 1px solid blue;
+  border: 1px solid red;
   grid-row-start: 1;
   grid-row-end: 3;
-  background: green;
+  background: #0B0808;
+  color: white;
 }
 
 
@@ -37,6 +37,20 @@
   grid-column-end: 6;
   grid-row-start: 3;
   grid-row-end: 5;
-  border: 1px solid green;
   background: pink;
+}
+
+.playlist {
+  display: flex;
+  justify-content: center;
+
+}
+
+.logo {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  h2 {
+    display: inline;
+  }
 }

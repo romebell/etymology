@@ -1,4 +1,5 @@
 import React from 'react';
+import PlaylistItem from './playlist_item';
 
 class Playlists extends React.Component {
   constructor(props) {
@@ -10,19 +11,34 @@ class Playlists extends React.Component {
   }
 
   render() {
-    const { playlists } = this.props;
+    // const { playlists } = this.props;
+    const playlists = this.props.playlists.map(playlist => {
+      return (<PlaylistItem 
+        key={playlist.id}
+        playlist={playlist}
+        deletePlaylist={this.props.deletePlaylist} />
+      );
+    });
     return (
       <div className="webplayer">
         <div className="container">
           <div className="box box-1">
-            <ul>
-              {
-                playlists.map(playlist => (
-                  <li>{playlist.title}</li>
+            <div className="logo" >
+              <h2>logo</h2>
+              <h2>Etymology</h2>
+            </div>
+            <div className="playlist">
+              <ul>
+                {/* {
+                  playlists.map(playlist => (
+                    <h2>{playlist.title}</h2>
+                    // <li>PLAYLIST</li>
+                    )
                   )
-                )
-              }
-            </ul>
+                } */}
+                {playlists}
+              </ul>
+            </div>
           </div>
           <div className="box box-2">Box 2</div>
           <div className="box box-3">Play Bar</div>

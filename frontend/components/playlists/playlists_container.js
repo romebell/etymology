@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { requestPlaylists, deletePlaylist } from '../../actions/playlist_actions';
 
 const mapStateToProps = state => {
-  debugger
   let playlists = Object.values(state.entities.playlists);
   
   return ({
