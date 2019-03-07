@@ -29,16 +29,10 @@ class Playlists extends React.Component {
             </div>
             <div className="playlist">
               <ul>
-                {/* {
-                  playlists.map(playlist => (
-                    <h2>{playlist.title}</h2>
-                    // <li>PLAYLIST</li>
-                    )
-                  )
-                } */}
-                {playlists}
+                <li>{playlists}</li>
               </ul>
             </div>
+            <div>{}</div>
           </div>
           <div className="box box-2">Box 2</div>
           <div className="box box-3">Play Bar</div>

@@ -16,4 +16,17 @@ class Playlist < ApplicationRecord
     primary_key: :id,
     foreign_key: :user_id,
     class_name: :User
+
+    has_one_attached :photo
+
+
+    def generate_photo
+      if self.photo.attached?
+        self.photo
+      else
+        "https://media.brides.com/photos/5994759d8c2b365d5c23c0c5/1:1/w_767/A.P.%2520Bio%2520rose%2520detail.png"
+      end
+    end
 end
+
+
