@@ -32,6 +32,7 @@ gem "aws-sdk-s3"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'faker'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
@@ -56,7 +57,6 @@ group :development do
   gem 'better_errors'
   gem "binding_of_caller"
   gem 'annotate'
-  gem 'faker'
 end
 
 group :test do
