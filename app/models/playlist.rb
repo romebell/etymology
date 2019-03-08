@@ -24,7 +24,7 @@ class Playlist < ApplicationRecord
       if self.photo.attached?
         self.photo
       else
-        "https://media.brides.com/photos/5994759d8c2b365d5c23c0c5/1:1/w_767/A.P.%2520Bio%2520rose%2520detail.png"
+        "https://upload.wikimedia.org/wikipedia/en/7/78/Dedication3wayne.jpg"
       end
     end
 end

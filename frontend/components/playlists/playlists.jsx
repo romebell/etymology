@@ -24,8 +24,7 @@ class Playlists extends React.Component {
         <div className="container">
           <div className="box box-1">
             <div className="logo" >
-              <h2>logo</h2>
-              <h2>Etymology</h2>
+              <h2>ETYMOLOGY</h2>
             </div>
             <div className="playlist">
               <ul>
@@ -34,8 +33,11 @@ class Playlists extends React.Component {
             </div>
             <div>{}</div>
           </div>
-          <div className="box box-2">Box 2</div>
-          <div className="box box-3">Play Bar</div>
+          <div className="box box-2">
+           {/* <li>{playlists}</li> */}
+          </div>
+          <div className="box box-3">
+          </div>
         </div>
       </div>
     )

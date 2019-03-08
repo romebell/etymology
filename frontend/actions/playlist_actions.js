@@ -9,9 +9,9 @@ const receiveAllPlaylists = playlists => ({
   playlists: playlists
 });
 
-const receivePlaylist = playlist => ({
+const receivePlaylist = payload => ({
   type: RECEIVE_PLAYLIST,
-  playlist: playlist
+  payload: payload
 });
 
 const removePlaylist = playlist => ({

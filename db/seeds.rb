@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
 
 Playlist.destroy_all
 Song.destroy_all
@@ -24,26 +25,11 @@ user7 = User.create!({username: Faker::Name.name, email: Faker::Internet.email, 
 user8 = User.create!({username: Faker::Name.name, email: Faker::Internet.email, password: 'password'})
 user9 = User.create!({username: Faker::Name.name, email: Faker::Internet.email, password: 'password'})
 
-artist1 = Artist.create!({ name: Faker::Artist.name, biography: Faker::TvShows::TheFreshPrinceOfBelAir.quote })
-artist2 = Artist.create!({ name: Faker::Artist.name, biography: Faker::TvShows::TheFreshPrinceOfBelAir.quote })
-artist3 = Artist.create!({ name: Faker::Artist.name, biography: Faker::TvShows::TheFreshPrinceOfBelAir.quote })
-artist4 = Artist.create!({ name: Faker::Artist.name, biography: Faker::TvShows::TheFreshPrinceOfBelAir.quote })
-artist5 = Artist.create!({ name: Faker::Artist.name, biography: Faker::TvShows::TheFreshPrinceOfBelAir.quote })
-artist6 = Artist.create!({ name: Faker::Artist.name, biography: Faker::TvShows::TheFreshPrinceOfBelAir.quote })
-
-album1 = Album.create!({ title: Faker::Music.album, artist_id: artist1.id})
-album2 = Album.create!({ title: Faker::Music.album, artist_id: artist1.id})
-album3 = Album.create!({ title: Faker::Music.album, artist_id: artist1.id})
-album4 = Album.create!({ title: Faker::Music.album, artist_id: artist2.id})
-album5 = Album.create!({ title: Faker::Music.album, artist_id: artist2.id})
-album6 = Album.create!({ title: Faker::Music.album, artist_id: artist2.id})
-
 playlist1 = Playlist.create!({title: "Bumping Lil Wayne", user_id: demo.id})
 playlist2 = Playlist.create!({title: "Bumping to Drake", user_id: demo.id})
 playlist3 = Playlist.create!({title: "Vibing to JCole", user_id: user1.id})
 playlist4 = Playlist.create!({title: "Singing along to Frank Ocean", user_id: user2.id})
 playlist5 = Playlist.create!({title: "Cruising to Sy Ari", user_id: user2.id})
-
 
 lil_wayne_biography = "Dwayne Michael Carter Jr. (born September 27, 1982), known professionally as Lil Wayne, 
 is an American rapper and singer. In 1993, at the age of 11, he was discovered by Bryan 'Birdman' Williams and 
@@ -88,11 +74,28 @@ friday_night_lights  = Album.create!({ title: "Friday Night Lights", artist_id: 
 channel_orange       = Album.create!({ title: "Channel Orange", artist_id: frank_ocean.id})
 after_the_heartbreak = Album.create!({ title: "After The Heartbreak", artist_id: sy_ari.id})
 
-song1 = Song.create!({ title: "Welcome Back", duration: 57, album_id: dedication_3.id })
-song2 = Song.create!({ title: "Dedication 3", duration: 472, album_id: dedication_3.id })
-song3 = Song.create!({ title: "What Else is There To Do", duration: 62, album_id: dedication_3.id })
-song4 = Song.create!({ title: "Thingy Please", duration: 240, album_id: dedication_3.id })
-song5 = Song.create!({ title: "Aint I", duration: 168, album_id: dedication_3.id })
-song6 = Song.create!({ title: "You Love Me You Hate Me", duration: 100, album_id: dedication_3.id })
-song7 = Song.create!({ title: "Bang Bang", duration: 237, album_id: dedication_3.id })
-song8 = Song.create!({ title: "The Other Side", duration: 279, album_id: dedication_3.id })
+song1Track = open("https://s3-us-west-1.amazonaws.com/etymology-seeds/01_Welcome_Back.mp3")
+song2Track = open("https://s3-us-west-1.amazonaws.com/etymology-seeds/02+-+Dedication+3.mp3")
+song3Track = open("https://s3-us-west-1.amazonaws.com/etymology-seeds/03+-+What+Else+Is+There+To+Do.mp3")
+song4Track = open("https://s3-us-west-1.amazonaws.com/etymology-seeds/04+-+Thingy+Pleaser.mp3")
+song5Track = open("https://s3-us-west-1.amazonaws.com/etymology-seeds/05+-+Aint+I.mp3")
+song6Track = open("https://s3-us-west-1.amazonaws.com/etymology-seeds/06+-+You+Love+Me+You+Hate+Me.mp3")
+song7Track = open("https://s3-us-west-1.amazonaws.com/etymology-seeds/07+-+Bang+Bang.mp3")
+song8Track = open("https://s3-us-west-1.amazonaws.com/etymology-seeds/08+-+The+Other+Side.mp3")
+
+song1 = Song.create!({ title: "Welcome Back", duration: 57, album_id: dedication_3.id})
+song1.track.attach(io: song1Track, filename: "t1.mp3")
+song2 = Song.create!({ title: "Dedication 3", duration: 472, album_id: dedication_3.id})
+song2.track.attach(io: song2Track, filename: "t2.mp3")
+song3 = Song.create!({ title: "What Else is There To Do", duration: 62, album_id: dedication_3.id})
+song3.track.attach(io: song3Track, filename: "t3.mp3")
+song4 = Song.create!({ title: "Thingy Please", duration: 240, album_id: dedication_3.id})
+song4.track.attach(io: song4Track, filename: "t4.mp3")
+song5 = Song.create!({ title: "Aint I", duration: 168, album_id: dedication_3.id})
+song5.track.attach(io: song5Track, filename: "t5.mp3")
+song6 = Song.create!({ title: "You Love Me You Hate Me", duration: 100, album_id: dedication_3.id})
+song6.track.attach(io: song6Track, filename: "t6.mp3")
+song7 = Song.create!({ title: "Bang Bang", duration: 237, album_id: dedication_3.id})
+song7.track.attach(io: song7Track, filename: "t7.mp3")
+song8 = Song.create!({ title: "The Other Side", duration: 279, album_id: dedication_3.id})
+song8.track.attach(io: song8Track, filename: "t8.mp3")

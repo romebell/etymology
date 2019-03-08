@@ -23,6 +23,6 @@ class Song < ApplicationRecord
   foreign_key: :album_id,
   class_name: :Album
 
-  has_one_attached :song
+  has_one_attached :track
 
 end

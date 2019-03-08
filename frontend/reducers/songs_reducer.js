@@ -12,7 +12,7 @@ const SongsReducer = (state = {}, action) => {
       newState[action.song.id] = action.song;
       return newState;
     case RECEIVE_PLAYLIST:
-      if (action.playload.songs) return action.payload.songs;
+      if (action.payload.songs) return action.payload.songs;
       return {};
     default:
       return state;
