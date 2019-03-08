@@ -1,12 +1,12 @@
 class Api::SongsController < ApplicationController
-  before_action :require_login
+  # before_action :require_login
 
   def index
     @songs = Song.all
   end
 
   def show
-    @song = select_playlist
+    @song = select_song
   end
 
   private

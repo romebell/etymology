@@ -5,7 +5,9 @@ import Root from './components/root';
 
 // TESTING
 import * as APIUtil from './utils/playlist_api_utils';
+import * as SongAPIUtil from './utils/song_api_utils';
 import * as PlaylistActions from './actions/playlist_actions';
+import { requestSongs, requestSong } from './actions/song_actions'
 import { postSession } from './utils/session_api_util';
 
 window.login = postSession;

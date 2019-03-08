@@ -44,26 +44,6 @@ playlist3 = Playlist.create!({title: "Vibing to JCole", user_id: user1.id})
 playlist4 = Playlist.create!({title: "Singing along to Frank Ocean", user_id: user2.id})
 playlist5 = Playlist.create!({title: "Cruising to Sy Ari", user_id: user2.id})
 
-lil_wayne    = Artist.create!({name: "Lil Wayne"}, biography: lil_wayne_biography)
-drake        = Artist.create!({name: "Drake"}, biography: drake_biography)
-j_cole       = Artist.create!({name: "J Cole"}, biography: j_cole_biography)
-frank_ocean  = Artist.create!({name: "Frank Ocean"}, biography: frank_ocean_biography)
-sy_ari       = Artist.create!({name: "Sy Ari Da Kid"}, biography: sy_ari_biography)
-
-dedication_3 = Album.create!({ title: "Dedication 3", artist_id: lil_wayne.id})
-so_far_gone = Album.create!({ title: "So Far Gone", artist_id: drake.id})
-friday_night_lights = Album.create!({ title: "Friday Night Lights", artist_id: j_cole.id})
-channel_orange = Album.create!({ title: "Channel Orange", artist_id: frank_ocean.id})
-after_the_heartbreak = Album.create!({ title: "After The Heartbreak", artist_id: sy_ari.id})
-
-song1 = Song.create!({ title: "Welcome Back", duration: 57, album_id: dedication_3.id })
-song2 = Song.create!({ title: "Dedication 3", duration: 472, album_id: dedication_3.id })
-song3 = Song.create!({ title: "What Else is There To Do", duration: 62, album_id: dedication_3.id })
-song4 = Song.create!({ title: "Thingy Please", duration: 240, album_id: dedication_3.id })
-song5 = Song.create!({ title: "Aint I", duration: 168, album_id: dedication_3.id })
-song6 = Song.create!({ title: "You Love Me You Hate Me", duration: 100, album_id: dedication_3.id })
-song7 = Song.create!({ title: "Bang Bang", duration: 237, album_id: dedication_3.id })
-song8 = Song.create!({ title: "The Other Side", duration: 279, album_id: dedication_3.id })
 
 lil_wayne_biography = "Dwayne Michael Carter Jr. (born September 27, 1982), known professionally as Lil Wayne, 
 is an American rapper and singer. In 1993, at the age of 11, he was discovered by Bryan 'Birdman' Williams and 
@@ -95,3 +75,24 @@ sy_ari_biography = "Sy Ari Brockington (born January 8, 1986) is an American sin
 in The Bronx, New York but moved to Atlanta, Georgia at the age of nine. As a child he dreamed of being a professional basketball 
 player, but soon turned to rapping after influence from his brother and cousin. He attended Robert L. Osborne High School, alongside 
 rapper K Camp. After graduation, Brockington would appear in battle raps on Atlanta's HOT 107.9 FM, where he was noted for 11 consecutive victories."
+
+lil_wayne    = Artist.create!({name: "Lil Wayne", biography: lil_wayne_biography})
+drake        = Artist.create!({name: "Drake", biography: drake_biography})
+j_cole       = Artist.create!({name: "J Cole", biography: j_cole_biography})
+frank_ocean  = Artist.create!({name: "Frank Ocean", biography: frank_ocean_biography})
+sy_ari       = Artist.create!({name: "Sy Ari Da Kid", biography: sy_ari_biography})
+
+dedication_3         = Album.create!({ title: "Dedication 3", artist_id: lil_wayne.id})
+so_far_gone          = Album.create!({ title: "So Far Gone", artist_id: drake.id})
+friday_night_lights  = Album.create!({ title: "Friday Night Lights", artist_id: j_cole.id})
+channel_orange       = Album.create!({ title: "Channel Orange", artist_id: frank_ocean.id})
+after_the_heartbreak = Album.create!({ title: "After The Heartbreak", artist_id: sy_ari.id})
+
+song1 = Song.create!({ title: "Welcome Back", duration: 57, album_id: dedication_3.id })
+song2 = Song.create!({ title: "Dedication 3", duration: 472, album_id: dedication_3.id })
+song3 = Song.create!({ title: "What Else is There To Do", duration: 62, album_id: dedication_3.id })
+song4 = Song.create!({ title: "Thingy Please", duration: 240, album_id: dedication_3.id })
+song5 = Song.create!({ title: "Aint I", duration: 168, album_id: dedication_3.id })
+song6 = Song.create!({ title: "You Love Me You Hate Me", duration: 100, album_id: dedication_3.id })
+song7 = Song.create!({ title: "Bang Bang", duration: 237, album_id: dedication_3.id })
+song8 = Song.create!({ title: "The Other Side", duration: 279, album_id: dedication_3.id })

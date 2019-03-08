@@ -39,4 +39,3 @@ export const deletePlaylist = id => dispatch => (
   APIUtil.destroyPlaylist(id).then(playlist => dispatch(removePlaylist(playlist)))
 )
 
-window.createPlaylist = createPlaylist;
