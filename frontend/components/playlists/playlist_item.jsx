@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const PlaylistItem = ({ playlist, deletePlaylist }) => {
   return (
     <ul>
-      <li>{playlist.id}: {playlist.title} - {playlist.userId}</li>
+      <li>{playlist.title} - {playlist.userId}</li>
       <img src={playlist.photoURL} alt=""/>
     </ul>
   )

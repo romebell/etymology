@@ -27,9 +27,9 @@ user9 = User.create!({username: Faker::Name.name, email: Faker::Internet.email, 
 
 playlist1 = Playlist.create!({title: "Bumping Lil Wayne", user_id: demo.id})
 playlist2 = Playlist.create!({title: "Bumping to Drake", user_id: demo.id})
-playlist3 = Playlist.create!({title: "Vibing to JCole", user_id: user1.id})
-playlist4 = Playlist.create!({title: "Singing along to Frank Ocean", user_id: user2.id})
-playlist5 = Playlist.create!({title: "Cruising to Sy Ari", user_id: user2.id})
+playlist3 = Playlist.create!({title: "Vibing to JCole", user_id: demo.id})
+playlist4 = Playlist.create!({title: "Singing along to Frank Ocean", user_id: demo.id})
+playlist5 = Playlist.create!({title: "Cruising to Sy Ari", user_id: demo.id})
 
 lil_wayne_biography = "Dwayne Michael Carter Jr. (born September 27, 1982), known professionally as Lil Wayne, 
 is an American rapper and singer. In 1993, at the age of 11, he was discovered by Bryan 'Birdman' Williams and 

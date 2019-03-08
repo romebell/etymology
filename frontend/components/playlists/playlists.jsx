@@ -1,5 +1,6 @@
 import React from 'react';
 import PlaylistItem from './playlist_item';
+import { Link } from 'react-router-dom';
 
 class Playlists extends React.Component {
   constructor(props) {
@@ -28,13 +29,13 @@ class Playlists extends React.Component {
             </div>
             <div className="playlist">
               <ul>
-                <li>{playlists}</li>
+               <a className="">Playlists</a>
               </ul>
             </div>
             <div>{}</div>
           </div>
           <div className="box box-2">
-           {/* <li>{playlists}</li> */}
+           <li>{playlists}</li>
           </div>
           <div className="box box-3">
           </div>
