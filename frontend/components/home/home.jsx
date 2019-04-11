@@ -9,7 +9,7 @@ const Home = () => {
       <div>
         <ul className="home-ul">
           <Link to="/">
-            <img className="home-logo" src="https://icons-for-free.com/free-icons/png/512/112764.png" alt="Etymology"/>
+            <i className="fas fa-headphones fa-3x home-logo"></i>
             <h2>Etymology</h2>
           </Link>
           <Link className="home-navbar" to="/login">Log In</Link>

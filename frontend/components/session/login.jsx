@@ -35,7 +35,7 @@ class Login extends React.Component {
         <div className="content">
           <div className="login">
             <section>
-              <img className="login-signup-logo" src="https://icons-for-free.com/free-icons/png/512/112764.png" alt="Etymology"/>
+              <i className="fas fa-headphones fa-3x login-signup-logo"></i>
               <h1 className="login-signup-h1">Etymology</h1>
             </section>
             <hr />

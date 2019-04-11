@@ -25,7 +25,8 @@ class Playlists extends React.Component {
         <div className="container">
           <div className="box box-1">
             <div className="logo" >
-              <h2>ETYMOLOGY</h2>
+            <i className="fas fa-headphones fa-2x"></i>
+              <h2> ETYMOLOGY</h2>
             </div>
             <div className="playlist">
               <ul>
